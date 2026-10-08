@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    ports:
+      - "8501:8501"   # Streamlit dashboard
+      - "8000:8000"   # FastAPI (docs at /docs)

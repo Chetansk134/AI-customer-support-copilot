@@ -1,0 +1,21 @@
+# Core
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+requests
+streamlit
+# LangChain + LLM providers (OpenAI default, Groq optional)
+langchain
+langchain-core
+langchain-openai
+langchain-groq
+groq
+langchain-chroma
+langchain-text-splitters
+# Vector store + memory
+chromadb
+mem0ai
+# Testing
+pytest
+httpx

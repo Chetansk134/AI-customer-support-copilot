@@ -1,0 +1,3 @@
+# Only needed if you set EMBEDDING_PROVIDER=local (free local embeddings, but a big PyTorch download)
+sentence-transformers
+langchain-huggingface

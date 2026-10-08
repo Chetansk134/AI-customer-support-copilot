@@ -1,0 +1,17 @@
+# Render Blueprint - free web service built from the Dockerfile.
+# Render redeploys automatically on every push to the connected branch (this is the "CD" part).
+services:
+  - type: web
+    name: support-copilot
+    runtime: docker
+    plan: free
+    autoDeployTrigger: checksPass   # deploy only after the GitHub Actions CI passes
+    envVars:
+      - key: LLM_PROVIDER
+        value: openai
+      - key: OPENAI_API_KEY
+        sync: false                 # paste your key in the Render dashboard, never commit it
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: EMBEDDING_PROVIDER
+        value: openai
